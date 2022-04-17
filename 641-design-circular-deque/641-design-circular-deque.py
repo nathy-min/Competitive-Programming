@@ -46,10 +46,7 @@ class MyCircularDeque(object):
         if self.circularQueue[self.front]!=None:
             self.circularQueue[self.front]=None
             temp=True
-            if self.front+1==self.size:
-                self.front=0
-            else:
-                self.front+=1
+            self.front=(self.front+1)%self.size
         return temp
         """
         :rtype: bool
