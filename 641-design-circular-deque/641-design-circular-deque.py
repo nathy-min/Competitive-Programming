@@ -30,10 +30,7 @@ class MyCircularDeque(object):
             return False
         if self.circularQueue[self.last]==None:
             self.circularQueue[self.last]=value
-            if self.last+1==self.size:
-                self.last=0
-            else:
-                self.last+=1
+            self.last=(self.last+1)%self.size
             return True
         
         """
