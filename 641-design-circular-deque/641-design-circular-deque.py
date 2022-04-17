@@ -35,8 +35,7 @@ class MyCircularDeque(object):
             else:
                 self.last+=1
             return True
-        else:
-            return False
+        
         """
         :type value: int
         :rtype: bool
