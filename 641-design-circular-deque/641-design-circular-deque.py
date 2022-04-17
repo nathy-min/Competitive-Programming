@@ -19,8 +19,7 @@ class MyCircularDeque(object):
             else:
                 self.front=self.front-1
             return True
-        else:
-            return False
+       
         """
         :type value: int
         :rtype: bool
