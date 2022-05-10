@@ -5,22 +5,9 @@ class Solution(object):
         :rtype: str
         """
         li=[]
-        li[:0]=s
-        i=0
-        j=1
-        while li and j!= len(li):
-            
-            if li[i]==li[j]:
-                li.pop(i)
-                li.pop(j-1)
-                if i==0:
-                    continue
-                else:
-                    i-=1
-                    j-=1
+        for i in s:
+            if li and li[-1]==i:
+                li.pop()
             else:
-                i+=1
-                j+=1
-        S=''
-        return S.join(li)
-                    
+                li.append(i)
+        return ''.join(li)        
