@@ -2,6 +2,7 @@ class Solution:
     def shortestSubarray(self, nums: List[int], k: int) -> int:
         n = len(nums)
         prefix_sums = [0]*(n + 1)
+        
         for i in range(n):
             prefix_sums[i + 1] = prefix_sums[i] + nums[i]
         queue = deque()
