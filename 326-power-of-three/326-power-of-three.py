@@ -1,10 +1,7 @@
-class Solution(object):
-    def isPowerOfThree(self, n):
-        """
-        :type n: int
-        :rtype: bool
-        """
-        x=3
-        while x<n:
-            x*=3
-        return x==n  or n==1  
+class Solution:
+    def isPowerOfThree(self, n: int) -> bool:
+        if n<=1:
+            return n==1 or n==-1
+        else:
+            
+            return self.isPowerOfThree(n/3)
