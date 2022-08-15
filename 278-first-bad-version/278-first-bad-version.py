@@ -1,8 +1,10 @@
 # The isBadVersion API is already defined for you.
-# def isBadVersion(version: int) -> bool:
+# @param version, an integer
+# @return a bool
+# def isBadVersion(version):
 
-class Solution:
-    def firstBadVersion(self, n: int) -> int:
+class Solution(object):
+    def firstBadVersion(self, n):
         badver = float("-inf")
         l = 1
         r = n
