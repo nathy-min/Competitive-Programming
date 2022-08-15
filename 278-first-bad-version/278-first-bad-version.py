@@ -5,7 +5,6 @@
 
 class Solution(object):
     def firstBadVersion(self, n):
-        badver = float("-inf")
         l = 1
         r = n
         while l <= r:
