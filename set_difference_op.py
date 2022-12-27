@@ -1,0 +1,7 @@
+no_eng = int(input())
+rol_eng = set(input().split(' '))
+no_fre = int(input())
+rol_fre = set(input().split(' '))
+only_eng = rol_eng.difference(rol_fre)
+no_onlyeng = len(only_eng)
+print(no_onlyeng)
