@@ -1,0 +1,6 @@
+no_eng = int(input())
+rol_eng = set(input().split(' '))
+no_fre = int(input())
+rol_fre = set(input().split(' '))
+union_eng_fre = rol_eng.union(rol_fre)
+print(len(union_eng_fre))
