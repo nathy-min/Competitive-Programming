@@ -4,10 +4,12 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        a=0
-        for i in range (len(nums)-1):
-            for j in range(i+1,len(nums)):
-                if nums[i]==nums[j]:
-                    a+=1
-        return a            
-                
+        size = len(nums)
+        good_pairs = 0
+        for i in range(size-1):
+            for j in range(i+1, size):
+                if nums[i] == nums[j]:
+                    good_pairs += 1
+                    
+        return good_pairs            
+            
