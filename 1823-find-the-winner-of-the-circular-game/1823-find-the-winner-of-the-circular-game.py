@@ -1,21 +1,9 @@
-class Solution(object):
-    def findTheWinner(self, n, k):
-        """
-        :type n: int
-        :type k: int
-        :rtype: int
-        """
-        f=range(1,n+1)
-        i=0
-        c=1
-        while len(f)> 1:
-            if c==k:
-                f.pop(i)
-                c=1
-            else:
-                c+=1
-                i=(i+1)%len(f)
-        return f[0]        
-                
-            
+class Solution:
+    def findTheWinner(self, n: int, k: int) -> int:
+        lst = [i+1 for i in range(n)]
+        ptr = 0
+        while len(lst) > 1:
+            ptr = (ptr + (k - 1)) % len(lst) 
+            lst.pop(ptr)
+        return lst[0]     
             
