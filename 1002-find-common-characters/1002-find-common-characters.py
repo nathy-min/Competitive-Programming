@@ -19,7 +19,6 @@ class Solution:
             arr_words[0][i] = min(temp)
             if arr_words[0][i] > 0:
                 for j in range(arr_words[0][i]):
-                    print(chr(i))
                     common_letters.append(chr(i + 97))
                     
                     
