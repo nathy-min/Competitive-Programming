@@ -7,10 +7,12 @@ class Solution(object):
         """
         size = len(names)
         for i in range(size ):
-            for j in range(size - 1):
-                if heights[j] < heights[j + 1]:
-                    heights[j], heights[j + 1] = heights[j + 1], heights[j]
-                    names[j], names[j + 1] = names[j + 1], names[j]
+            temp_ptr = i
+            for j in range(i , size):
+                if heights[temp_ptr] < heights[j]:
+                    temp_ptr = j
+            heights[i], heights[temp_ptr] = heights[temp_ptr], heights[i]
+            names[i], names[temp_ptr] = names[temp_ptr], names[i]
        
         return names           
                     
