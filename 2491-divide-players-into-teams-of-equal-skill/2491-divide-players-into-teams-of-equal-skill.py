@@ -1,5 +1,9 @@
-class Solution:
-    def dividePlayers(self, skill: List[int]) -> int:
+class Solution(object):
+    def dividePlayers(self, skill):
+        """
+        :type skill: List[int]
+        :rtype: int
+        """
         total_sum = sum(skill)              # Total sum
         n = len(skill)
         
@@ -23,3 +27,4 @@ class Solution:
             r-=1
             
         return chemistry_tot
+        
